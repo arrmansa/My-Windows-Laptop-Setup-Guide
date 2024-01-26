@@ -37,7 +37,8 @@ where <YOUR CONFIG ID> is the power config you use - something like `fdv8v0nu8-f
 
 ### Enable hibernate
 
-`powercfg /hibernate on`
+`powercfg /hibernate on` \
+`powercfg /h /size 100%`
 
 ### This might be needed
 [https://github.com/ElectronicElephant/Modern-Standby-Byby](https://github.com/ElectronicElephant/Modern-Standby-Byby)
