@@ -5,7 +5,7 @@ My guide to setup windows in a way that is private, fast and updateless.
 Just the basic configuration
 
 ## Step 0 Backup the entire drive
-For obvious reasons
+For obvious reasons - tentative tool [https://medicatusb.com/](https://medicatusb.com/)
 
 ## Step 1 Windows AME [https://ameliorated.io/](https://ameliorated.io/)
 This will strip the useless bloat that comes with windows
