@@ -1,6 +1,9 @@
 # My-Windows-Laptop-Setup-Guide
 My guide to setup windows in a way that is private, fast and updateless.
 
+# Basic setup
+Just the basic configuration
+
 ## Step 0 Backup the entire drive
 For obvious reasons
 
@@ -33,7 +36,7 @@ Dword key `EnforceDisconnectedStandby` value 1 [link](https://www.elevenforum.co
 `PowerCfg /SetDCValueIndex <YOUR CONFIG ID> SUB_NONE CONNECTIVITYINSTANDBY 0` \
 `PowerCfg /SetACValueIndex <YOUR CONFIG ID> SUB_NONE CONNECTIVITYINSTANDBY 0`
 
-where <YOUR CONFIG ID> is the power config you use - something like `fdv8v0nu8-freu8fy-fre834f8h-e32y783` that you see with `powercfg /a`
+where `<YOUR CONFIG ID>` is the power config you use - something like `fdv8v0nu8-freu8fy-fre834f8h-e32y783` that you see with `powercfg /a`
 
 ### Enable hibernate
 
