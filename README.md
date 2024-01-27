@@ -15,11 +15,11 @@ Store the full disk image backup in another usb
 `Export-WindowsDriver -Online -Destination C:/somepath/drivers/backup` in powershell should do it. I have confirmed this works on windows 10 ame 21H1 as well
 
 ### Backup registry
-Don't think it's needed but why not, just export the whole thing as a .reg file.
+Don't think it's needed but why not, just export the whole thing as a .reg file, and have a restore point.
 
 
 ## Step 1 Windows AME [https://ameliorated.io/](https://ameliorated.io/)
-This will strip the useless bloat that comes with windows
+This will strip the useless bloat that comes with windows. I will personally be using the windows 10 ame 21H1 iso install.
 
 ## Step 2 Netlimiter [https://www.netlimiter.com/](https://www.netlimiter.com/)
 This will give us finer control over the internet. Set the behaviour of this to block network connections by default
