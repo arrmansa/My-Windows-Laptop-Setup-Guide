@@ -4,8 +4,19 @@ My guide to setup windows in a way that is private, fast and updateless.
 # Basic setup
 Just the basic configuration
 
-## Step 0 Backup the entire drive
-For obvious reasons - tentative tool [https://medicatusb.com/](https://medicatusb.com/)
+## Step 0 Backup 
+
+### Backup the entire drive as an image (probably to a 64 gb usb stick)
+Requirements - 2 x 64gb pendrives
+Use medicatusb in one usb [https://medicatusb.com/](https://medicatusb.com/)
+Store the full disk image backup in another usb
+
+### Backup all the drivers
+`Export-WindowsDriver -Online -Destination C:/somepath/drivers/backup` in powershell should do it. I have confirmed this works on windows 10 ame 21H1 as well
+
+### Backup registry
+Don't think it's needed but why not, just export the whole thing as a .reg file.
+
 
 ## Step 1 Windows AME [https://ameliorated.io/](https://ameliorated.io/)
 This will strip the useless bloat that comes with windows
@@ -47,4 +58,4 @@ where `<YOUR CONFIG ID>` is the power config you use - something like `fdv8v0nu8
 [https://github.com/ElectronicElephant/Modern-Standby-Byby](https://github.com/ElectronicElephant/Modern-Standby-Byby)
 
 ## Step 5 Get the drivers
-Use device manager and google-fu to do this
+Use the previous backup, device manager and google-fu to do this.
