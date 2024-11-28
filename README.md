@@ -73,7 +73,7 @@ Use [https://www.sordum.org/9480/defender-control-v2-1/](https://www.sordum.org/
 ## Step 7 Pause updates for 20 years
 [https://www.elevenforum.com/t/disable-automatic-windows-updates-in-windows-11.22669/](https://www.elevenforum.com/t/disable-automatic-windows-updates-in-windows-11.22669/)
 
-Increase time to 20 years with registry key
+Increase time to 20 years with registry key (You need to make a new key)
 Folder - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
 Key - FlightSettingsMaxPauseDays
 Value - dword:00001c84
@@ -85,24 +85,36 @@ https://github.com/ChrisTitusTech/winutil/releases/tag/24.10.07
 Similar to [https://superuser.com/questions/1058487/permanantly-delete-bits-annd-windows-update-services-in-windows-10](https://superuser.com/questions/1058487/permanantly-delete-bits-annd-windows-update-services-in-windows-10) But better I think, because we just get executables that are effectively dead and just stuck in place that cannot be run.
 ### For these files, make it so no user can execute them.
 ```
+C:\Windows\System32\backgroundTaskHost.exe
+C:\Windows\System32\BackgroundTransferHost.exe
 C:\Windows\System32\CompatTelRunner.exe
 C:\Windows\System32\DeviceCensus.exe
+C:\Windows\System32\dosvc.dll
 C:\windows\system32\sihclient.exe
 C:\windows\system32\usoclient.exe
 C:\windows\system32\waasmedicagent.exe
+C:\Windows\System32\wermgr.exe
 C:\windows\system32\wsqmcons.exe
 C:\Windows\UUS\amd64\mousocoreworker.exe
 C:\Windows\UUS\amd64\UusBrain.dll
 C:\Windows\UUS\amd64\UusFailover.dll
 C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
 C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
-C:\Windows\System32\backgroundTaskHost.exe
-C:\Windows\System32\BackgroundTransferHost.exe
-C:\Windows\System32\wermgr.exe
 ```
 ### For these folders, delete contents and, make it so no user can write or read them
 ```
 C:\Windows\SoftwareDistribution\Download
 ```
-
-## Step 9 Erase
+## Step 9 Delete task scheduler entriee for windows update, update medic, update orchestrator, and telemetry
+```cmd
+psexec.exe -i -s %windir%\system32\mmc.exe /s taskschd.msc
+```
+# Step 10 Stop and disable services
+```
+BITS - Background Intelligent Transfer Service - C:\Windows\System32\svchost.exe -k netsvcs -p
+```
+## Use registry to disable Delivery optimization
+Folder - `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc`
+Key - `Start`
+Value - `4`
+Previous Value - `3`
