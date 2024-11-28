@@ -97,6 +97,7 @@ C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
 C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
 C:\Windows\System32\backgroundTaskHost.exe
 C:\Windows\System32\BackgroundTransferHost.exe
+C:\Windows\System32\wermgr.exe
 ```
 ### For these folders, delete contents and, make it so no user can write or read them
 ```
