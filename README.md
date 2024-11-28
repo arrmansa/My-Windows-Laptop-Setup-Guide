@@ -118,3 +118,25 @@ Folder - `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc`
 Key - `Start`
 Value - `4`
 Previous Value - `3`
+
+## Disable exe's using debugger
+[https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options)
+[https://www.reddit.com/r/Windows10/comments/y2zteh/comment/is7dqtv/](https://www.reddit.com/r/Windows10/comments/y2zteh/comment/is7dqtv/)
+[https://securityblueteam.medium.com/utilizing-image-file-execution-options-ifeo-for-stealthy-persistence-331bc972554e](https://securityblueteam.medium.com/utilizing-image-file-execution-options-ifeo-for-stealthy-persistence-331bc972554e)
+In the registry, we use debugger options to disable exes (that we already disabled)
+
+```
+C:\Windows\System32\backgroundTaskHost.exe
+C:\Windows\System32\BackgroundTransferHost.exe
+C:\Windows\System32\CompatTelRunner.exe
+C:\Windows\System32\DeviceCensus.exe
+C:\Windows\System32\dosvc.dll
+C:\windows\system32\sihclient.exe
+C:\windows\system32\usoclient.exe
+C:\windows\system32\waasmedicagent.exe
+C:\Windows\System32\wermgr.exe
+C:\windows\system32\wsqmcons.exe
+C:\Windows\UUS\amd64\mousocoreworker.exe
+C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
+C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
+```
