@@ -82,6 +82,7 @@ Value - dword:00001c84
 https://github.com/ChrisTitusTech/winutil/releases/tag/24.10.07
 
 ## Step 8 Become owner (make the owner .../Administrators) and remove all permissions 
+Similar to [https://superuser.com/questions/1058487/permanantly-delete-bits-annd-windows-update-services-in-windows-10](https://superuser.com/questions/1058487/permanantly-delete-bits-annd-windows-update-services-in-windows-10) But better I think, because we just get executables that are effectively dead and just stuck in place that cannot be run.
 ### For these files, make it so no user can execute them.
 ```
 C:\Windows\System32\CompatTelRunner.exe
