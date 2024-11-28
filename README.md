@@ -32,7 +32,7 @@ This will strip the useless bloat that comes with windows. I will personally be 
 This will give us finer control over the internet. Set the behaviour of this to block network connections by default
 
 ## Step 3 WindowsSpyBlocker [https://github.com/crazy-max/WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker)
-Set the NCSI to be the Debian one, Firewall rules not required.
+Set the NCSI to be the Firefox one, Firewall rules not required.
 
 ## Step 4 Disable Connected Standby 
 We want the laptop to  not have some sort of weird semi-sleep.
