@@ -1,6 +1,13 @@
 # My-Windows-Laptop-Setup-Guide
 My guide to setup windows in a way that is private, fast and updateless.
 
+# What windows update can screw up
+## 1. Second screen on asus duo may be disabled
+## 2. Nvidia driver can stop working
+## 3. Main screen can start flickering
+## 4. Windows recovery can become broken from expired components
+To fix this, we need to set the date to 2015 to re-enable windows recovery.
+
 # Basic setup
 Just the basic configuration
 
@@ -88,7 +95,8 @@ C:\Windows\UUS\amd64\UusBrain.dll
 C:\Windows\UUS\amd64\UusFailover.dll
 C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
 C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
-C:\Windows\System32\DiagSvc.dll
+C:\Windows\System32\backgroundTaskHost.exe
+C:\Windows\System32\BackgroundTransferHost.exe
 ```
 ### For these folders, delete contents and, make it so no user can write or read them
 ```
