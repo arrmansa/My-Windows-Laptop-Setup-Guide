@@ -102,10 +102,20 @@ Dword key `EnforceDisconnectedStandby` value 1 [link](https://www.elevenforum.co
 
 Now we need to run the commands - 
 
+(1 is enabled, 2 is managed by windows and 0 is disabled) [https://www.tenforums.com/tutorials/146593-enable-disable-network-connectivity-modern-standby-windows-10-a.html](https://www.tenforums.com/tutorials/146593-enable-disable-network-connectivity-modern-standby-windows-10-a.html)
+
+
+
+
+where `<YOUR CONFIG ID>` is the power config you use - something like `fdv8v0nu8-freu8fy-fre834f8h-e32y783` that you can see with `powercfg /L`
+
+You can get the current value using `powercfg /QUERY <YOUR CONFIG ID> sub_NONE`
+
+And you should set it to 0 with
+
 `PowerCfg /SetDCValueIndex <YOUR CONFIG ID> SUB_NONE CONNECTIVITYINSTANDBY 0` \
 `PowerCfg /SetACValueIndex <YOUR CONFIG ID> SUB_NONE CONNECTIVITYINSTANDBY 0`
 
-where `<YOUR CONFIG ID>` is the power config you use - something like `fdv8v0nu8-freu8fy-fre834f8h-e32y783` that you can see with `powercfg /L`
 
 ### Enable hibernate
 
