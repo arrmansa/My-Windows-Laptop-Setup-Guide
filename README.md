@@ -80,7 +80,7 @@ New Value `0`
 ## Step 4 Disable Connected Standby 
 We want the laptop to  not have some sort of weird semi-sleep.
 
-use ` powercfg /a` to check
+use ` powercfg /a` to check your standby states
 
 ### Ouptut 
 
