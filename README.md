@@ -24,12 +24,47 @@ Store the full disk image backup in another usb
 ### Backup registry
 Don't think it's needed but why not, just export the whole thing as a .reg file, and have a restore point.
 
-
 ## Step 1 Windows AME [https://ameliorated.io/](https://ameliorated.io/)
 This will strip the useless bloat that comes with windows. I will personally be using the windows 10 ame 21H1 iso install.
 
 ## Step 2 Netlimiter [https://www.netlimiter.com/](https://www.netlimiter.com/)
-This will give us finer control over the internet. Set the behaviour of this to block network connections by default
+This will give us finer control over the internet. Set the behaviour of this to block network connections by default.
+Remove the existing rules for `svchost.exe`
+
+Add 2 filters - Allow in and out with weight 100
+
+### DHCP ALLOW
+
+```
+Application is
+C:\windows\system32\svchost.exe
+C:\windows\system32\svchost.exe@Dnscache
+
+Remote port in range
+67
+
+Transport protocol is
+UDP(17)
+
+Local port in range
+68
+```
+
+### Dnscache Allowed
+
+```
+Application is
+C:\windows\system32\svchost.exe@Dnscache
+
+Remote port in range
+53
+5353
+5355
+
+Transport protocol is
+UDP(17)
+TCP(6)
+```
 
 ## Step 3 WindowsSpyBlocker [https://github.com/crazy-max/WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker)
 Set the NCSI to be the Firefox one, Firewall rules not required.
@@ -146,7 +181,7 @@ C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
 C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
 ```
 
-## Fix context menu
+## Fix context menu - Use the old contex menu, not the `show ore options` crap
 run the command in admin command prompt
 ```
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
