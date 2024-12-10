@@ -3,8 +3,11 @@ My guide to setup windows in a way that is private, fast and updateless.
 
 # What windows update can screw up
 ## 1. Second screen on asus duo may be disabled
+The very latest windows just won't allow me to use my second screen, All the other updates etc. did not work. Just won't even show up in device manager.
 ## 2. Nvidia driver can stop working
+Idk why an update nuked my driver, but atleast I can reinstall this.
 ## 3. Main screen can start flickering
+The main screen can start filckering if armoury crate is not open while the battery is connected
 ## 4. Windows recovery can become broken from expired components
 To fix this, we need to set the date to 2015 to re-enable windows recovery.
 
@@ -111,7 +114,7 @@ where `<YOUR CONFIG ID>` is the power config you use - something like `fdv8v0nu8
 
 You can get the current value using `powercfg /QUERY <YOUR CONFIG ID> sub_NONE`
 
-And you should set it to 0 with
+And you should set it to 0 with this for all config id's (Yeah it is a pain to run 8 commands)
 
 `PowerCfg /SetDCValueIndex <YOUR CONFIG ID> SUB_NONE CONNECTIVITYINSTANDBY 0` \
 `PowerCfg /SetACValueIndex <YOUR CONFIG ID> SUB_NONE CONNECTIVITYINSTANDBY 0`
