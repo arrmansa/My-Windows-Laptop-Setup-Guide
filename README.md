@@ -79,6 +79,15 @@ We want the laptop to  not have some sort of weird semi-sleep.
 
 use ` powercfg /a` to check
 
+### Ouptut 
+
+```
+The following sleep states are available on this system:
+    Standby (S0 Low Power Idle) Network Disconnected
+    Hibernate
+    Fast Startup
+```
+
 ### Create registry keys in folder `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power` 
 
 Dword Key `CsEnabled` value 0 [link](https://answers.microsoft.com/en-us/windows/forum/all/how-to-disable-modern-standby-in-windows-10-may/db950560-33da-4a90-8340-b1f181f5efe6) \
