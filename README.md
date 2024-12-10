@@ -33,6 +33,11 @@ This will give us finer control over the internet. Set the behaviour of this to 
 
 ## Step 3 WindowsSpyBlocker [https://github.com/crazy-max/WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker)
 Set the NCSI to be the Firefox one, Firewall rules not required.
+Disable internet checking using registry key
+Folder `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NlaSvc\Parameters\Internet`
+Dword Key `EnableActiveProbing`
+Original Value `1`
+New Value `0`
 
 ## Step 4 Disable Connected Standby 
 We want the laptop to  not have some sort of weird semi-sleep.
