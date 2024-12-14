@@ -222,6 +222,32 @@ Can be enabled (bad setting)
 Enable-MMAgent –mc
 ```
 
+## Adjust appearance and performance
+Disable 
+```
+Animate controls and elements inside windows
+Animate windows when minimizing and maximizing
+Animations in the taskbar
+Fade or slide menus into view
+Fade or slide ToolTips into view
+Fade out menu items after clicking
+Save taskbar thumbnail previews
+Slide open combo boxes
+```
+Enable
+```
+Enable Peek
+Show shadows under mouse pointer
+Show shadows under windows
+Show thumbnails instead of icons
+Show translucent selection rectangle
+Show window contents while dragging
+Smooth edges of screen fonts
+Smooth-scroll list boxes
+Use drop shadows for icon labels on the desktop
+```
+
+
 ### Fix touchpad edgemotion zones
 Might be changed using, wip
 https://community.frame.work/t/disable-edge-drag-for-windows-precision-touchpad/47892
