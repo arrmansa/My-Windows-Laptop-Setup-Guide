@@ -210,3 +210,10 @@ run the command in admin command prompt
 ```
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
+
+### Fix touchpad edgemotion zones
+Might be changed using, wip
+https://community.frame.work/t/disable-edge-drag-for-windows-precision-touchpad/47892
+https://github.com/imbushuo/mac-precision-touchpad/issues/262
+https://superuser.com/questions/1721893/disable-part-of-touchpad-on-win-10
+https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/touchpad-tuning-guidelines
