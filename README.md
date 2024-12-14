@@ -211,6 +211,17 @@ run the command in admin command prompt
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
+## Disable memory compression
+https://silicophilic.com/windows-memory-compression/
+Run in admin powershell 
+```
+Disable-MMAgent –mc
+```
+Can be enabled (bad setting)
+```
+Enable-MMAgent –mc
+```
+
 ### Fix touchpad edgemotion zones
 Might be changed using, wip
 https://community.frame.work/t/disable-edge-drag-for-windows-precision-touchpad/47892
