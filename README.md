@@ -259,3 +259,17 @@ https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/t
 
 AAPThreshold - 0
 AAPDisabled - 1
+
+## Use powershell script to assign cores to processes more optimally 
+
+`stop_lag.ps1` 
+
+when firefox goes high cpu and causes fans to spin, use this
+
+```powershell
+ForEach($PROCESS in GET-PROCESS firefox) {
+    $PROCESS.ProcessorAffinity=1
+    $PROCESS.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::BelowNormal
+    Write-Host "Updated process: $($PROCESS.Name) (PID: $($PROCESS.Id))"
+}
+```
