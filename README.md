@@ -254,3 +254,8 @@ https://community.frame.work/t/disable-edge-drag-for-windows-precision-touchpad/
 https://github.com/imbushuo/mac-precision-touchpad/issues/262
 https://superuser.com/questions/1721893/disable-part-of-touchpad-on-win-10
 https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/touchpad-tuning-guidelines
+
+https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/touchpad-tuning-guidelines#suppressing-accidental-activation-protection
+
+AAPThreshold - 0
+AAPDisabled - 1
