@@ -7,9 +7,11 @@ The very latest windows just won't allow me to use my second screen, All the oth
 ## 2. Nvidia driver can stop working
 Idk why an update nuked my driver, but atleast I can reinstall this.
 ## 3. Main screen can start flickering
-The main screen can start filckering if armoury crate is not open while the battery is connected
+The main screen can start filckering if armoury crate is not open while the battery is connected.
 ## 4. Windows recovery can become broken from expired components
 To fix this, we need to set the date to 2015 to re-enable windows recovery.
+## 5. Wifi is unreliable
+Wifi is unreliable if wlan auto config is allowed, or save power is allowed
 
 # Basic setup
 Just the basic configuration
@@ -249,7 +251,7 @@ Use drop shadows for icon labels on the desktop
 
 
 ### Fix touchpad edgemotion zones
-Might be changed using, wip
+Can be changed using this
 https://community.frame.work/t/disable-edge-drag-for-windows-precision-touchpad/47892
 https://github.com/imbushuo/mac-precision-touchpad/issues/262
 https://superuser.com/questions/1721893/disable-part-of-touchpad-on-win-10
@@ -259,6 +261,87 @@ https://learn.microsoft.com/en-us/windows-hardware/design/component-guidelines/t
 
 AAPThreshold - 0
 AAPDisabled - 1
+
+For changing edge tap drag to minimum - 
+
+SuperCurtainBottom - 1
+SuperCurtainLeft - 1
+SuperCurtainRight - 1
+SuperCurtainTop - 1 
+
+
+
+## Network
+
+Device manager > adapter 
+
+In power, uncheck turn off this device to save power
+Disable roaming, wake on magic packet etc., change power to max
+Set WlanAutoConfigService to delayed start using registry - 
+
+
+https://smallvoid.com/article/winnt-services-regedit.html
+
+```
+0 = Boot
+1 = System
+2 = Automatic
+3 = Manual
+4 = Disabled
+```
+
+Folder - `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WlanSvc`
+Key - `DelayedAutoStart`
+Value - `1`
+
+Then run this in admin command window
+```
+netsh wlan show settings
+```
+to get
+```
+Wireless LAN settings
+---------------------
+    Show blocked networks in visible network list: No
+
+    Only use GP profiles on GP-configured networks: No
+
+    Hosted network mode allowed in WLAN service: Yes
+
+    Allow shared user credentials for network authentication: Yes
+
+    Block period: Not Configured.
+
+    Auto configuration logic is enabled on interface "Wi-Fi"
+    MAC randomization enabled on interface Wi-Fi
+```
+
+then you can do  `netsh wlan set autoconfig enabled=no interface="name of your wireless network here"`
+which in my case is 
+```
+netsh wlan set autoconfig enabled=no interface="Wi-Fi"
+```
+
+and then use the show command to confirm 
+
+```
+C:\Windows\system32>netsh wlan show settings
+
+Wireless LAN settings
+---------------------
+    Show blocked networks in visible network list: No
+
+    Only use GP profiles on GP-configured networks: No
+
+    Hosted network mode allowed in WLAN service: Yes
+
+    Allow shared user credentials for network authentication: Yes
+
+    Block period: Not Configured.
+
+    Auto configuration logic is disabled on interface "Wi-Fi"
+    MAC randomization enabled on interface Wi-Fi
+```
 
 ## Use powershell script to assign cores to processes more optimally 
 
