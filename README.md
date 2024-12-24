@@ -12,6 +12,8 @@ The main screen can start filckering if armoury crate is not open while the batt
 To fix this, we need to set the date to 2015 to re-enable windows recovery.
 ## 5. Wifi is unreliable
 Wifi is unreliable if wlan auto config is allowed, or save power is allowed
+## 6. Touchpad slows down randomly
+Touchpad slows down if asus stuff is enabled
 
 # Basic setup
 Just the basic configuration
@@ -356,3 +358,4 @@ ForEach($PROCESS in GET-PROCESS firefox) {
     Write-Host "Updated process: $($PROCESS.Name) (PID: $($PROCESS.Id))"
 }
 ```
+## Disable asus system analysis in task scheduler and services to prevent rouchpad lag
