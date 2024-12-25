@@ -14,6 +14,7 @@ To fix this, we need to set the date to 2015 to re-enable windows recovery.
 Wifi is unreliable if wlan auto config is allowed, or save power is allowed
 ## 6. Touchpad slows down randomly
 Touchpad slows down if asus stuff is enabled - actually was "C:\Windows\System32\ctfmon.exe" found using Procmon.exe, was showing a ton of reg events and my touchpad lagged like crazy
+Stopping this fixes touchpad, but blocks search and explorer input https://answers.microsoft.com/en-us/windows/forum/all/is-there-a-way-to-control-ctfmon-from-running-in/b7030532-ab97-4897-9786-26d865571a60
 
 # Basic setup
 Just the basic configuration
