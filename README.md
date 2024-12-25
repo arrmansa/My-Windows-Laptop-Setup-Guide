@@ -13,7 +13,7 @@ To fix this, we need to set the date to 2015 to re-enable windows recovery.
 ## 5. Wifi is unreliable
 Wifi is unreliable if wlan auto config is allowed, or save power is allowed
 ## 6. Touchpad slows down randomly
-Touchpad slows down if asus stuff is enabled
+Touchpad slows down if asus stuff is enabled - actually was "C:\Windows\System32\ctfmon.exe"
 
 # Basic setup
 Just the basic configuration
@@ -168,6 +168,7 @@ C:\Windows\UUS\amd64\UusBrain.dll
 C:\Windows\UUS\amd64\UusFailover.dll
 C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
 C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
+C:\Windows\System32\ctfmon.exe
 ```
 ### For these folders, delete contents and, make it so no user can write or read them
 ```
