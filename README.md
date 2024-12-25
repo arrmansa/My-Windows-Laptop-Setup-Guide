@@ -359,3 +359,7 @@ ForEach($PROCESS in GET-PROCESS firefox) {
 }
 ```
 ## Disable asus system analysis in task scheduler and services to prevent rouchpad lag
+
+tried disabling asus agni service, did not work
+happens every 10 min
+
