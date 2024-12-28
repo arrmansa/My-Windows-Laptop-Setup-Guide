@@ -11,7 +11,13 @@ The main screen can start filckering if armoury crate is not open while the batt
 ## 4. Windows recovery can become broken from expired components
 To fix this, we need to set the date to 2015 to re-enable windows recovery.
 ## 5. Wifi is unreliable
-Wifi is unreliable if wlan auto config is allowed, or save power is allowed
+Wifi is unreliable if wlan auto config is allowed, or save power is allowed.
+WLAN AutoConfig detected limited connectivity, attempting automatic recovery.
+
+Recovery Type: 4
+Error Code: 0x0
+Trigger Reason: 5
+IP Family: 0 
 ## 6. Touchpad slows down randomly
 Touchpad slows down if asus stuff is enabled - actually was "C:\Windows\System32\ctfmon.exe" found using Procmon.exe, was showing a ton of reg events and my touchpad lagged like crazy
 Stopping this fixes touchpad, but blocks search and explorer input https://answers.microsoft.com/en-us/windows/forum/all/is-there-a-way-to-control-ctfmon-from-running-in/b7030532-ab97-4897-9786-26d865571a60
@@ -285,6 +291,16 @@ Device manager > adapter
 
 In power, uncheck turn off this device to save power
 Disable roaming, wake on magic packet etc., change power to max
+
+registry key 
+https://officialaptivi.wordpress.com/2024/01/16/netlimdisable-fixes-random-disconnections/
+https://learn.microsoft.com/en-us/answers/questions/1359044/weve-experiencing-from-may-of-2023-wireless-discon
+https://community.cisco.com/t5/network-access-control/cisco-anyconnect-nam-stuck-in-associating-with-wifi/td-p/4774420
+https://github.com/wazuh/wazuh-qa/issues/3021
+
+Set registry key 
+HKLM\SOFTWARE\Microsoft\WcmSvc\EnableBadStateTracking - dword 0
+
 Set WlanAutoConfigService to delayed start using registry - 
 
 
@@ -331,6 +347,8 @@ netsh wlan set autoconfig enabled=no interface="Wi-Fi"
 ```
 
 and then use the show command to confirm 
+
+
 
 ```
 C:\Windows\system32>netsh wlan show settings
