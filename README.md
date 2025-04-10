@@ -180,6 +180,7 @@ C:\Windows\UUS\amd64\UusFailover.dll
 C:\Windows\System32\Speech_OneCore\common\SpeechModelDownload.exe
 C:\Windows\System32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe
 C:\Windows\System32\ctfmon.exe
+C:\Program Files (x86)\ASUS\Update\AsusUpdate.exe
 ```
 ### For these folders, delete contents and, make it so no user can write or read them
 ```
