@@ -25,6 +25,8 @@ Stopping this fixes touchpad, but blocks search and explorer input https://answe
 ctfmon queries C:\Windows\Globalization\ELS\SpellDictionaries\MsSp7en-US.lex
 C:\Windows\Globalization\ELS\SpellDictionaries\Fluency\en-US\.config
 we will block these
+Still persists gonna try to remove textinputhost
+C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe
 
 # Basic setup
 Just the basic configuration
