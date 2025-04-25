@@ -27,6 +27,8 @@ C:\Windows\Globalization\ELS\SpellDictionaries\Fluency\en-US\.config
 we will block these
 Still persists gonna try to remove textinputhost
 C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe
+Still having issues, it could be 
+C:\Windows\System32\RuntimeBroker.exe - https://www.reddit.com/r/Windows10/comments/17zwlk3/is_the_microsoft_text_input_application_supposed/
 
 # Basic setup
 Just the basic configuration
