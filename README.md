@@ -392,3 +392,20 @@ ForEach($PROCESS in GET-PROCESS firefox) {
 tried disabling asus agni service, did not work
 happens every 10 min
 
+## Photoshop
+Can rename `C:\Program Files\Adobe\Adobe Creative Cloud Experience\CCXProcess.exe` to `C:\Program Files\Adobe\Adobe Creative Cloud Experience\CCXProcess.exex`
+Can also rename `C:\Program Files\Adobe\Adobe Creative Cloud Experience\js\node_modules\@ccx\adobe-cr\build\Release\Adobe Crash Processor.exe` to `Adobe Crash Processor.exex`
+
+## For netlimiter to work, grouping on some services needs to be disabled
+Beause microsoft has grouping and netlimiter needs that grouping to be turned off
+[https://www.netlimiter.com/docs/basic-concepts/filters/system-services-and-windows-store-apps](https://www.netlimiter.com/docs/basic-concepts/filters/system-services-and-windows-store-apps)
+[https://learn.microsoft.com/en-us/windows/application-management/svchost-service-refactoring](https://learn.microsoft.com/en-us/windows/application-management/svchost-service-refactoring)
+"Type"=dword:00000010
+"ServiceSidType"=dword:00000001
+"SvcHostSplitDisable"=dword:00000001
+And these 2 because I want to make sure network happens with a bit of delay (post netlimiter startup)
+"Start"=dword:00000002
+"DelayedAutoStart"=dword:00000001
+
+## Windows 11 LTSC IOT enterprise with atlasOS mod is good
+
