@@ -50,6 +50,7 @@ Don't think it's needed but why not, just export the whole thing as a .reg file,
 This will strip the useless bloat that comes with windows. I will personally be using the windows 10 ame 21H1 iso install.
 
 ## Step 2 Netlimiter [https://www.netlimiter.com/](https://www.netlimiter.com/)
+Move the stats to unprotected D drive
 This will give us finer control over the internet. Set the behaviour of this to block network connections by default.
 Remove the existing rules for `svchost.exe`
 
