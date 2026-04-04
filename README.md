@@ -392,6 +392,11 @@ ForEach($PROCESS in GET-PROCESS firefox) {
 tried disabling asus agni service, did not work
 happens every 10 min
 
+## Full access on some sys files
+Set this file with full user access
+C:\Windows\system32\driverstore\filerepository\nvam.inf_amd64_04f7a5af24ef6f23\nvlddmkm.sys
+
+
 ## Photoshop
 Can rename `C:\Program Files\Adobe\Adobe Creative Cloud Experience\CCXProcess.exe` to `C:\Program Files\Adobe\Adobe Creative Cloud Experience\CCXProcess.exex`
 Can also rename `C:\Program Files\Adobe\Adobe Creative Cloud Experience\js\node_modules\@ccx\adobe-cr\build\Release\Adobe Crash Processor.exe` to `Adobe Crash Processor.exex`
