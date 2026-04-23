@@ -397,6 +397,9 @@ happens every 10 min
 Set this file with full user access
 C:\Windows\system32\driverstore\filerepository\nvam.inf_amd64_04f7a5af24ef6f23\nvlddmkm.sys
 
+# Bad exe's that use a lot of registry stuff + cpu for no reason 
+FMService64.exe - FMAPOService (Fortemedia service) should be disabled.
+
 
 ## Photoshop
 Can rename `C:\Program Files\Adobe\Adobe Creative Cloud Experience\CCXProcess.exe` to `C:\Program Files\Adobe\Adobe Creative Cloud Experience\CCXProcess.exex`
