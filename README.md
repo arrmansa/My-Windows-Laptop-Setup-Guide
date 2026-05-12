@@ -418,3 +418,10 @@ And these 2 because I want to make sure network happens with a bit of delay (pos
 
 ## Windows 11 LTSC IOT enterprise with atlasOS mod is good
 
+## Set Default gpu to integrated
+
+https://learn.microsoft.com/en-us/answers/questions/4314188/how-to-change-default-graphics-%28universal-default%29
+Thanks for replying. I didn't use NVIDIA Control Panel, as NVCP says that "Windows OS now manages selection of the graphics processor".
+
+I have since solved my issue, as the '[HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectX\UserGpuPreferences]' registry key holds the settings for GUI Windows Graphics Settings Menu, and setting the "(Default)" string to "GpuPreference=1;" seems to have done the trick.
+
