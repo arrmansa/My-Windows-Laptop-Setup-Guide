@@ -425,3 +425,9 @@ Thanks for replying. I didn't use NVIDIA Control Panel, as NVCP says that "Windo
 
 I have since solved my issue, as the '[HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectX\UserGpuPreferences]' registry key holds the settings for GUI Windows Graphics Settings Menu, and setting the "(Default)" string to "GpuPreference=1;" seems to have done the trick.
 
+
+move C:\ProgramData\Microsoft\Windows\Containers to D:\WindowsSandbox\Containers
+
+make sure that all the files transfer with trustedinstaller stuff
+
+mklink /J "C:\ProgramData\Microsoft\Windows\Containers" "D:\WindowsSandbox\Containers"
