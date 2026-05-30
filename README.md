@@ -425,6 +425,12 @@ Thanks for replying. I didn't use NVIDIA Control Panel, as NVCP says that "Windo
 
 I have since solved my issue, as the '[HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectX\UserGpuPreferences]' registry key holds the settings for GUI Windows Graphics Settings Menu, and setting the "(Default)" string to "GpuPreference=1;" seems to have done the trick.
 
+(doesn't seem to work well)
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM adding PreferredGPU 0 
+(also works)
+
+nvidia-smi --query-compute-apps=pid,process_name,used_memory shows what is running on gpu
 
 # mklinks 
 
